@@ -1,7 +1,7 @@
 package main
 
 import (
-	operations "Golang/Operations"
+	operations "Golang/TestingPackage"
 	"fmt"
 )
 
