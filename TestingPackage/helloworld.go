@@ -1,18 +1,15 @@
 package main
 
 import (
-	operations "Golang/TestingPackage"
+	operations "TestingPackage/Test"
 	"fmt"
 )
 
 func main() {
+	fmt.Println("Hello World")
 
-	fmt.Println("Hello World!")
-
-	var sum int = operations.Sum(10, 20)
-
-	fmt.Println("Sum of 10 and 20 is: ", sum)
-
+	result := operations.Sum(10, 20)
+	fmt.Println("Sum:", result)
 }
 
 /*
