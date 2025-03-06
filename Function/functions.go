@@ -40,6 +40,12 @@ func main() {
 
 	fmt.Println("Factorial of 7 is: ", value)
 
+	clickCnt := 20
+
+	// Call by reference
+	IncreaseClickCount(&clickCnt) // This is call by reference
+	fmt.Println("The click count is: ", clickCnt)
+
 }
 
 // Functions are of four types:

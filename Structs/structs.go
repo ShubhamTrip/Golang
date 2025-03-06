@@ -22,9 +22,9 @@ func (u User) getAge() int {
 }
 
 // Setter
-func (u User) setEmail(email string) {
-	u.Email = email
-}
+// func (u User) setEmail(email string) {
+// 	u.Email = email // This will show an error because we are not changing the value of the struct
+// }
 
 func main() {
 
@@ -45,9 +45,11 @@ func main() {
 
 	fmt.Println("The age is: ", user1.getAge())
 
-	user1.setEmail("sdfsfsd@gmail.com")
+	// user1.setEmail("sdfsfsd@gmail.com")
 
-	fmt.Println(user1) // This doesnt change the email because we are not changing the value of the struct
+	// fmt.Println(user1)
+
+	// This doesnt change the email because we are not changing the value of the struct
 	// To change the value of the struct we need to use pointers
 	// We are currently passing the value of the struct to the method
 	// What is happenng here is that the value of the struct is being copied to the method
@@ -60,4 +62,8 @@ func main() {
 
 		     So When we call setEmail on a user instance, Go creates a copy of the user instance and passes it to the function. The function then modifies the copy, not the original instance.
 	*/
+
+	user1.setEmailUsingPtr("pointer@gmail.com")
+
+	fmt.Println(user1)
 }
