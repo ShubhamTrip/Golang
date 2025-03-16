@@ -26,7 +26,7 @@ func main() {
 				isUnique = false
 			}
 		}
-		if isUnique == true {
+		if isUnique {
 			fmt.Println(arr[i], "is Unique")
 		}
 	}
