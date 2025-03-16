@@ -11,6 +11,17 @@ type User struct {
 	Email      string
 }
 
+// If you want to make a constructor for the struct
+// a func with newUser will be created .. (We use new with struct name to create a constructor)
+func newUser(Name string, Age int, IsLoggedIn bool, Email string) *User {
+	return &User{Name, Age, IsLoggedIn, Email}
+}
+
+// Can be made without pointer as well. But it is better to use pointer.
+// func newUser(Name string, Age int, IsLoggedIn bool, Email string) User {
+// 	return User{Name, Age, IsLoggedIn, Email}
+// }
+
 // This is Method for Struct User
 func (u User) getName() {
 	fmt.Println("Name is: ", u.Name)
@@ -44,6 +55,12 @@ func main() {
 	user2.getName()
 
 	fmt.Println("The age is: ", user1.getAge())
+
+	userConst := newUser("Shubham", 21, true, "abcd@gmail.com")
+
+	userConst.setEmailUsingPtr("shub@gmail.com")
+
+	fmt.Println(userConst)
 
 	// user1.setEmail("sdfsfsd@gmail.com")
 
