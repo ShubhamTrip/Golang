@@ -21,7 +21,9 @@ type Rectangle struct {
 	length, width float64
 }
 
-// Here since we have added Interface above, we need to implement the methods
+// Question is that how to implement interface.
+// Ans.. If a method of struct (method with (c Circle) for example) is same named as the method in interface it automatically inplented interface.
+// Here since we have Implemented Interface above, we need to implement all the methods
 // If we don't implement the methods, we will get an error
 // Here dont have to use implements keyword, it is automatically implemented
 
